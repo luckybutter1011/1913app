@@ -16,7 +16,7 @@ export default function Home() {
     <main className="w-full flex bg-background justify-center min-h-[800px] bg-bk-img">
       <div className="flex flex-col w-[1400px]">
         <div className="flex items-center justify-center ">
-          <p className="text-black text-[28px] mt-4 bg-[rgba(255,255,255,0.9)] rounded-lg px-4">
+          <p className="text-blue-600 text-[28px] mt-4 bg-[rgba(255,255,255,0.9)] rounded-lg px-4">
             $1913 Token: <span className="text-[36px] text-black">$0.0412</span>
           </p>
         </div>
@@ -24,8 +24,8 @@ export default function Home() {
           <div className="w-1/3 gap-6 flex flex-col mx-[20px] animate-fade-right animate-once animate-ease-out">
             <div className="bg-[rgba(255,255,255,0.9)] py-6 px-8 rounded-xl">
               <div className="flex flex-col gap-6">
-                <p className="text-gray-800 drop-shadow-lg underline text-[48px] leading-none font-bold">The 1913$ is a new Stable coin</p>
-                <p className="text-gray-600 drop-shadow text-[20px]">The 1913$ is a new Stable coin that is inflation resistant. It goes up in value based on the CPI data for inflation.</p>
+                <p className="text-gray-800 drop-shadow-lg underline text-[48px] leading-none font-bold">The $1913 is a new Stable coin</p>
+                <p className="text-gray-600 drop-shadow text-[20px]">The $1913 is a new Stable coin that is inflation resistant. It goes up in value based on the CPI data for inflation.</p>
               </div>
               <div className="flex flex-row gap-6 items-center mt-6">
                 <div className="flex -space-x-2 overflow-hidden mt-2">
