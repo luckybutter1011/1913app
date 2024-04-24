@@ -18,12 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -31,7 +28,23 @@ body {
     text-wrap: balance;
   }
 }
+
 /* background image color */
-.bg-background{
+.bg-background {
   background-color: #0F051D;
+}
+
+/* background Image */
+.bg-bk-img {
+  height: 100%;
+  background-image: url('/background.jpg');
+  background-size: 102%;
+  background-repeat: no-repeat;
+  animation: animatedBackground 10s linear alternate infinite;
+}
+
+@keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  50% { background-position: 50% 0; }
+  100% { background-position: 0 0; }
 }

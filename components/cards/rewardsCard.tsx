@@ -1,5 +1,7 @@
 import { Input, Button, Card, CardHeader, CardBody } from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 export default function RewardsCard() {
   return (
     <>
@@ -46,7 +48,8 @@ export default function RewardsCard() {
               />
             </div>
           </div>
-          <Button variant="solid" className="uppercase bg-gray-700 my-4 mx-4 text-white text-[16px]">Connect Wallet</Button>
+          <ConnectButton />
+          {/* <Button variant="solid" className="uppercase bg-gray-700 my-4 mx-4 text-white text-[16px]">Connect Wallet</Button> */}
           <div className="flex w-full flex-col items-center gap-4 py-2">
             <a href="#" className="uppercase text-gray-700 underline text-[12px]">WANT TO CLAIM YOUR $1913? CLICK HERE</a>
             <p className="text-gray-600 text-[12px]">Powered by <strong>$1913.com</strong></p>
