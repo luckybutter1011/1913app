@@ -14,15 +14,15 @@ export default function Home() {
   const [isTokenBuy, setTokenBuy] = useAtom(tokenBuyAtoms);
   return (
     <main className="w-full flex bg-background justify-center min-h-[800px] bg-bk-img">
-      <div className="flex flex-col w-[1400px] mt-[5rem]">
-        <div className="flex flex-row justify-between items-center mt-20">
-          <div className="w-1/3 gap-6 flex flex-col mx-[20px] animate-fade-right animate-once animate-ease-out">
+      <div className="flex flex-col mx-12 mt-[5rem]">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:mt-20 mx-[20px] gap-6">
+          <div className="lg:w-1/3 gap-6 flex flex-col animate-fade-right animate-once animate-ease-out">
             <div className="bg-[rgba(255,255,255,0.9)] py-6 px-8 rounded-xl">
               <div className="flex flex-col gap-6">
-                <p className="text-gray-800 drop-shadow-lg underline text-[48px] leading-none font-bold">The 1913$ is a new Stable coin</p>
-                <p className="text-gray-600 drop-shadow text-[20px]">The 1913$ is a new Stable coin that is inflation resistant. It goes up in value based on the CPI data for inflation.</p>
+                <p className="text-gray-800 drop-shadow-lg underline text-[32px] xl:text-[48px] leading-none font-bold">The 1913$ is a new Stable coin</p>
+                <p className="text-gray-600 drop-shadow text-[16px] xl:text-[20px]">The 1913$ is a new Stable coin that is inflation resistant. It goes up in value based on the CPI data for inflation.</p>
               </div>
-              <div className="flex flex-row gap-6 items-center mt-6">
+              <div className="flex flex-col lg:flex-row gap-6 items-center mt-6">
                 <div className="flex -space-x-2 overflow-hidden mt-2">
                   <img className="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
                   <img className="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
@@ -30,7 +30,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col">
                   <p className="text-gray-700 drop-shadow-lg font-bold"> 3k+</p>
-                  <p className="text-gray-700 drop-shadow-lg font-bold text-[16px]"> Community members</p>
+                  <p className="text-gray-700 drop-shadow-lg font-bold text-[14px] xl:text-[16px]"> Community members</p>
                 </div>
               </div>
             </div>

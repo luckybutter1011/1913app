@@ -14,11 +14,12 @@ export default function Navbar() {
         <div className="flex flex-row items-center justify-between w-full px-4">
           <button className="text-gray-200 text-[30px] font-bold flex flex-row items-center gap-4 font-mono active:scale-95">
             <Image alt="" src="/logo.png" height={40} width={40} className="w-[40px] h-[40px]" />
-            <span className="sm:text-[36px] text-[16px]">1913$</span>
+            <span className="lg:text-[36px] text-[20px]">1913$</span>
           </button>
-          <div className="flex items-center justify-center ">
-            <p className="text-black text-[28px] bg-[rgba(255,255,255,0.9)] rounded-lg px-4">
-              1913$ Price: <span className="text-[36px] text-black">$31.35</span>
+          <div className="hidden sm:flex items-center justify-center">
+            <p className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-4 gap-2 flex items-center flex-col sm:flex-row">
+              1913$ Price<span className="hidden sm:block">:</span>
+              <span className="text-[16px] sm:text-[24px] lg:text-[36px] text-black">$31.35</span>
             </p>
           </div>
           <div className="flex flex-row gap-6 items-center">

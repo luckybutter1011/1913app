@@ -8,7 +8,7 @@ export default function BuyTokenCard() {
   const [img_token, setImageToken] = useState('/icons/ether.png');
   return (
     <>
-      <Card className="animate-fade-right animate-once animate-ease-out w-[400px]">
+      <Card className="animate-fade-right animate-once animate-ease-out sm:w-[400px]">
         <CardHeader className="px-4 flex-col items-center bg-white border-b-1 border-gray-300">
           <p className="uppercase font-bold text-[20px] text-gray-700">BUY 1913$ TOKEN</p>
         </CardHeader>
