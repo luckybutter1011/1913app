@@ -14,11 +14,11 @@ export default function Home() {
   const [isTokenBuy, setTokenBuy] = useAtom(tokenBuyAtoms);
   return (
     <main className="w-full flex bg-background justify-center min-h-[800px] bg-bk-img">
-      <div className="flex flex-col mx-12 mt-[5rem]">
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:mt-20 mx-[20px] gap-6">
-          <div className="lg:w-1/3 gap-6 flex flex-col animate-fade-right animate-once animate-ease-out">
-            <div className="bg-[rgba(255,255,255,0.9)] py-6 px-8 rounded-xl">
-              <div className="flex flex-col gap-6">
+      <div className="flex flex-col mx-8 mt-[5rem]">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:mt-20 my-6 mx-[20px] gap-6">
+          <div className="lg:w-1/3 gap-8 flex flex-col animate-fade-right animate-once animate-ease-out">
+            <div className="bg-[rgba(255,255,255,0.9)] py-6 lg:py-16 px-8 rounded-xl">
+              <div className="flex flex-col gap-6 lg:gap-16">
                 <p className="text-gray-800 drop-shadow-lg underline text-[32px] xl:text-[48px] leading-none font-bold">The 1913$ is a new Stable coin</p>
                 <p className="text-gray-600 drop-shadow text-[16px] xl:text-[20px]">The 1913$ is a new Stable coin that is inflation resistant. It goes up in value based on the CPI data for inflation.</p>
               </div>
