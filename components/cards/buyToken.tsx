@@ -1,12 +1,11 @@
 import { Input, Button, Card, CardHeader, CardBody } from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
-import { walletOpenAtoms } from "../jotai/atom";
 import { useAtom } from "jotai";
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { ConnectWallet } from "../wallet/connectWallet";
+import { useState } from "react";
 
 export default function BuyTokenCard() {
-  const [isOpen, setOpen] = useAtom(walletOpenAtoms);
+  const [token, setToken] = useState("ETH");
+  const [img_token, setImageToken] = useState('/icons/ether.png');
   return (
     <>
       <Card className="animate-fade-right animate-once animate-ease-out w-[400px]">
@@ -17,16 +16,16 @@ export default function BuyTokenCard() {
           <p className="text-default-500 text-[16px] px-4 py-2">Use 0x-xxxxxxxxxxxxxxxxxxxxxxxxxxxx to add 1913$ to your wallet.</p>
           <div className="w-full gap-6 p-4 flex flex-row">
             <div className="w-1/2 flex flex-col gap-3">
-              <Button variant="bordered" className="w-full gap-2">
+              <Button variant="bordered" className="w-full gap-2" onClick={() => { setToken("ETH"); setImageToken('/icons/ether.png'); }}>
                 <Image alt="" src='/icons/ether.png' width={25} height={25} />
                 ETH
               </Button>
-              <Button variant="bordered" className="w-full gap-2">
+              <Button variant="bordered" className="w-full gap-2" onClick={() => { setToken("BNB"); setImageToken('/icons/dai.png'); }}>
                 <Image alt="" src='/icons/dai.png' width={25} height={25} />
                 DAI
               </Button>
               <p className="px-2 py-2 text-gray-400 flex flex-row">
-                <span>Amount in <strong>BNB</strong> you pay</span>
+                <span>Amount in <strong>{token}</strong> you pay</span>
                 <button className="font-bold text-black">Max</button>
               </p>
               <Input
@@ -34,16 +33,16 @@ export default function BuyTokenCard() {
                 placeholder="0"
                 labelPlacement="outside"
                 endContent={
-                  <Image className="pointer-events-none flex-shrink-0" alt="" src='/icons/bnb.png' width={25} height={25} />
+                  <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
                 }
               />
             </div>
             <div className="w-1/2 flex flex-col gap-3">
-              <Button variant="bordered" className="w-full gap-2">
+              <Button variant="bordered" className="w-full gap-2" onClick={() => { setToken("USDT"); setImageToken('/icons/usdt.png'); }}>
                 <Image alt="" src='/icons/usdt.png' width={25} height={25} />
                 USDT
               </Button>
-              <Button variant="bordered" className="w-full gap-2">
+              <Button variant="bordered" className="w-full gap-2" onClick={() => { setToken("USDC"); setImageToken('/icons/usdc.png'); }}>
                 <Image alt="" src='/icons/usdc.png' width={25} height={25} />
                 USDC
               </Button>
@@ -55,7 +54,7 @@ export default function BuyTokenCard() {
                 placeholder="0"
                 labelPlacement="outside"
                 endContent={
-                  <Image className="pointer-events-none flex-shrink-0" alt="" src='/icons/usdt.png' width={25} height={25} />
+                  <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
                 }
               />
             </div>

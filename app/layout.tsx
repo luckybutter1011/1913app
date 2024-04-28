@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
+import ToastProvider from "@/components/context/ToastContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-background font-serif">
         <NextUIProvider>
-          {children}
+          <ToastProvider>
+            {children}
+          </ToastProvider>
         </NextUIProvider>
       </body>
     </html>
