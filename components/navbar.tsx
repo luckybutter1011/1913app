@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="w-full flex flex-row p-3 bg-background">
         <div className="flex flex-row items-center justify-between w-full px-4">
           <button className="text-gray-200 text-[30px] font-bold flex flex-row items-center gap-4 font-mono active:scale-95">
-            <Image alt="" src="/logo.png" height={40} width={40} className="w-[40px] h-[40px]" />
+            <Image alt="" src="/logo.jpg" height={40} width={40} className="w-[40px] h-[40px]" />
             <span className="lg:text-[36px] text-[20px]">1913$</span>
           </button>
           <div className="hidden sm:flex items-center justify-center">
