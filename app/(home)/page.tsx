@@ -30,7 +30,11 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col">
                   <p className="text-gray-700 drop-shadow-lg font-bold"> 3k+</p>
-                  <p className="text-gray-700 drop-shadow-lg font-bold text-[14px] xl:text-[16px]"> Community members</p>
+                  <p className="text-gray-700 drop-shadow-lg font-bold text-[14px] xl:text-[16px]"> 
+                    <a href="https://twitter.com/1913$" target="_blank" rel="noreferrer" className="underline hover:text-blue-600">
+                      Community members
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
