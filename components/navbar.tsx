@@ -1,12 +1,12 @@
 'use client'
 import Image from "next/image"
+import { useAtom } from "jotai"
+import { visibleAtom } from "./jotai/atom"
 import { ConnectWallet } from "./wallet/connectWallet"
+import { useState } from "react"
 
 export default function Navbar() {
-  // const [isTokenBuy, setTokenBuy] = useAtom(tokenBuyAtoms);
-  // const init = () => {
-  //   setTokenBuy(false)
-  // }
+  const [visible, setVisible] = useAtom(visibleAtom);
 
   return (
     <>
@@ -17,15 +17,13 @@ export default function Navbar() {
             <span className="lg:text-[36px] text-[20px]">1913$</span>
           </button>
           <div className="hidden sm:flex items-center justify-center">
-            <p className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-4 gap-2 flex items-center flex-col sm:flex-row">
-              1913$ Price<span className="hidden sm:block">:</span>
-              <span className="text-[16px] sm:text-[24px] lg:text-[36px] text-black">$31.35</span>
+            <p className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-4 flex items-center flex-col sm:flex-col">
+              <p className="text-[16px] underline">Supported of 1913$ token Price is</p>
+              <span className="text-[16px] sm:text-[20px] lg:text-[24px] text-black">$31.35</span>
             </p>
           </div>
           <div className="flex flex-row gap-6 items-center">
-            {/* <button className="text-[14px] px-4 py-3 rounded-full text-white sm:text-[16px] flex flex-row gap-6 active:scale-95 hover:bg-gray-500" onClick={()=>setTokenBuy(true)}>
-              Buy Token
-            </button> */}
+            <button className="text-white px-6 active:scale-90" onClick={() => setVisible(!visible)} > MoonPay </button>
             <ConnectWallet />
           </div>
         </div>

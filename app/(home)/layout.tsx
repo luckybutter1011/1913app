@@ -8,7 +8,12 @@ import { getDefaultConfig, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum, base } from 'wagmi/chains';
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import dynamic from 'next/dynamic';
 
+const MoonPayProvider = dynamic(
+  () => import('@moonpay/moonpay-react').then((mod) => mod.MoonPayProvider),
+  { ssr: false },
+);
 const queryClient = new QueryClient();
 const config = getDefaultConfig({
   appName: '$1913 project',
@@ -24,18 +29,23 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <WagmiProvider config={config}>
-        <QueryClientProvider client={queryClient}>
-          <RainbowKitProvider>
-            <StoreProvider>
-              <Navbar />
-              {children}
-              <Footer />
-              <DevTools store={store} />
-            </StoreProvider>
-          </RainbowKitProvider>
-        </QueryClientProvider>
-      </WagmiProvider>
+      <MoonPayProvider
+        apiKey="pk_test_1Gk1wkhKpCDNtzqS417Nw6DRkHWkidaa"
+        debug
+      >
+        <WagmiProvider config={config}>
+          <QueryClientProvider client={queryClient}>
+            <RainbowKitProvider>
+              <StoreProvider>
+                <Navbar />
+                {children}
+                <Footer />
+                <DevTools store={store} />
+              </StoreProvider>
+            </RainbowKitProvider>
+          </QueryClientProvider>
+        </WagmiProvider>
+      </MoonPayProvider>
     </>
   );
 }

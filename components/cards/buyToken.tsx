@@ -1,6 +1,6 @@
 import { Input, Button, Card, CardHeader, CardBody, Tabs, Tab } from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
-import { useAtom } from "jotai";
+import { IoArrowForwardOutline } from "react-icons/io5";
 import { useState } from "react";
 
 export default function BuyTokenCard() {
@@ -19,14 +19,14 @@ export default function BuyTokenCard() {
           </div>
           {/* <p className="uppercase font-bold text-[20px] text-gray-700">BUY 1913$ TOKEN</p> */}
         </CardHeader>
-        <CardBody className="overflow-visible py-2">
+        <CardBody className="overflow-visible">
           {selected === "Buy" ?
-            <p className="text-default-500 text-[16px] px-4 py-2">Use 0x-xxxxxxxxxxxxxxxxxxxxxxxxxxxx to add 1913$ to your wallet.</p>
+            <p className="text-default-500 text-[16px] px-4">Use 0x-xxxxxxxxxxxxxxxxxxxxxxxxxxxx to add 1913$ to your wallet.</p>
             :
-            <p className="text-default-500 text-[16px] px-4 py-2">Sell the 1913$ to get the cryptocurrency.</p>
+            <p className="text-default-500 text-[16px] px-4">Sell the 1913$ to get the cryptocurrency.</p>
           }
-          <div className="w-full gap-6 p-4 flex flex-row">
-            <div className="w-1/2 flex flex-col gap-3">
+          <div className="w-full p-4">
+            <div className="grid grid-cols-2 gap-6">
               <Button variant="bordered" className={`${token === "ETH" ? "bg-slate-400" : ""} w-full gap-2`} onClick={() => { setToken("ETH"); setImageToken('/icons/ether.png'); }}>
                 <Image alt="" src='/icons/ether.png' width={25} height={25} />
                 ETH
@@ -35,39 +35,6 @@ export default function BuyTokenCard() {
                 <Image alt="" src='/icons/dai.png' width={25} height={25} />
                 DAI
               </Button>
-              {selected === "Buy" ?
-                <>
-                  <p className="px-2 py-2 text-gray-400 flex flex-row">
-                    <span>Amount in <strong>{token}</strong> you pay</span>
-                    <button className="font-bold text-black">Max</button>
-                  </p>
-                  <Input
-                    type="number"
-                    placeholder="0"
-                    labelPlacement="outside"
-                    endContent={
-                      <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
-                    }
-                  />
-                </>
-                :
-                <>
-                  <p className="px-2 py-2 text-gray-400 flex flex-row">
-                    <span>Amount in <strong>1913$</strong> you pay</span>
-                    <button className="font-bold text-black">Max</button>
-                  </p>
-                  <Input
-                    type="number"
-                    placeholder="0"
-                    labelPlacement="outside"
-                    endContent={
-                      <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
-                    }
-                  />
-                </>
-              }
-            </div>
-            <div className="w-1/2 flex flex-col gap-3">
               <Button variant="bordered" className={`${token === "USDT" ? "bg-slate-400" : ""} w-full gap-2`} onClick={() => { setToken("USDT"); setImageToken('/icons/usdt.png'); }}>
                 <Image alt="" src='/icons/usdt.png' width={25} height={25} />
                 USDT
@@ -76,41 +43,50 @@ export default function BuyTokenCard() {
                 <Image alt="" src='/icons/usdc.png' width={25} height={25} />
                 USDC
               </Button>
-              {selected === "Buy" ?
-                <>
-                  <p className="px-2 py-2 text-gray-400">
-                    Amount in <strong>1913$</strong> you recieve
-                  </p>
-                  <Input
-                    type="number"
-                    placeholder="0"
-                    labelPlacement="outside"
-                    endContent={
-                      <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
-                    }
-                  />
-                </>
-                :
-                <>
-                  <p className="px-2 py-2 text-gray-400 flex flex-row">
-                    <span>Amount in <strong>{token}</strong> you will get</span>
-                  </p>
-                  <Input
-                    type="number"
-                    placeholder="0"
-                    labelPlacement="outside"
-                    endContent={
-                      <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
-                    }
-                  />
-                </>
-              }
+            </div>
+            <div className="flex flex-row gap-6 py-2">
+              <p className="px-2 py-2 text-gray-400 flex flex-row">
+                {selected === "Buy" ?
+                  <span>Amount in <strong>{token}</strong> you pay.</span>
+                  :
+                  <span>Amount in <strong>1913$</strong> you sell</span>
+                }
+                <button className="font-bold text-black">Max</button>
+              </p>
+              <p className="px-2 py-2 text-gray-400">
+                {selected === "Sell" ?
+                  <span>Amount in <strong>{token}</strong> you receive.</span>
+                  :
+                  <span>Amount in <strong>1913$</strong> you receive.</span>
+                }
+              </p>
+            </div>
+            <div className="flex flex-row gap-2 py-2">
+              <Input
+                type="number"
+                placeholder="0"
+                labelPlacement="outside"
+                endContent={
+                  selected === "Buy" ?
+                  <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
+                  :
+                  <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
+                }
+              />
+              <IoArrowForwardOutline size={40} className="text-black" />
+              <Input
+                type="number"
+                placeholder="0"
+                labelPlacement="outside"
+                endContent={
+                  selected === "Sell" ?
+                  <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
+                  :
+                  <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
+                }
+              />
             </div>
           </div>
-          {/* <div className="flex justify-center p-2">
-            <ConnectWallet />
-          </div> */}
-          {/* <Button variant="solid" className="uppercase bg-gray-700 my-4 mx-4 text-white text-[16px]" onPress={()=>setOpen(true)}>Connect Wallet</Button> */}
           <div className="flex w-full flex-col items-center gap-4 py-4">
             <a href="#" className="uppercase text-gray-700 underline text-[12px]">WANT TO CLAIM YOUR 1913$? CLICK HERE</a>
             <p className="text-gray-600 text-[12px]">Powered by <strong>1913$.com</strong></p>
