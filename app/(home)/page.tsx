@@ -11,6 +11,7 @@ import Image from "next/image";
 import BuyTokenCard from "@/components/cards/buyToken";
 import dynamic from 'next/dynamic';
 
+
 const MoonPayBuyWidget = dynamic(
   () => import('@moonpay/moonpay-react').then((mod) => mod.MoonPayBuyWidget),
   { ssr: false },

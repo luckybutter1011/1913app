@@ -31,7 +31,6 @@ export default function RootLayout({
     <>
       <MoonPayProvider
         apiKey="pk_test_1Gk1wkhKpCDNtzqS417Nw6DRkHWkidaa"
-        debug
       >
         <WagmiProvider config={config}>
           <QueryClientProvider client={queryClient}>
