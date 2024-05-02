@@ -5,6 +5,7 @@ import WalletModal from "@/components/modals/wallet";
 import CookieModal from "@/components/modals/cookie";
 import { tokenBuyAtoms, visibleAtom } from "@/components/jotai/atom";
 import { useAtom } from "jotai";
+
 import { Input, Button, Card, CardHeader, CardBody } from "@nextui-org/react";
 import Image from "next/image";
 import BuyTokenCard from "@/components/cards/buyToken";
@@ -16,12 +17,20 @@ const MoonPayBuyWidget = dynamic(
 );
 
 export default function Home() {
-  const [isTokenBuy, setTokenBuy] = useAtom(tokenBuyAtoms);
   const [visible, setVisible] = useAtom(visibleAtom);
 
   return (
     <main className="w-full flex bg-background justify-center min-h-[800px] bg-bk-img">
-      <div className="flex flex-col mx-8 mt-[5rem]">
+      <div className="flex flex-col mx-8 mt-[1rem] lg:mt-[5rem] transition-all delay-500">
+        <div className="w-full flex justify-end py-1">
+          <Button variant="bordered" className="flex sm:hidden border-white bg-black text-white px-6 active:scale-90" onClick={() => setVisible(!visible)} > MoonPay </Button>
+        </div>
+        <div className="flex lg:hidden items-center justify-center">
+          <p className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-4 flex items-center flex-col">
+            <p className="text-[16px] underline">Supported of 1913$ token Price is</p>
+            <span className="text-[16px] sm:text-[20px] lg:text-[24px] text-black">$31.35</span>
+          </p>
+        </div>
         <div className="flex flex-col lg:flex-row justify-between items-center lg:mt-20 my-6 mx-[20px] gap-6">
           <div className="lg:w-1/3 gap-8 flex flex-col animate-fade-right animate-once animate-ease-out">
             <div className="bg-[rgba(255,255,255,0.9)] py-6 lg:py-10 px-8 rounded-xl">

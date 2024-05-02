@@ -1,6 +1,6 @@
 'use client'
 import '@rainbow-me/rainbowkit/styles.css';
-import Navbar from "@/components/navbar";
+import NavbarPage from "@/components/navbar";
 import Footer from "@/components/footer";
 import { StoreProvider, store } from "@/components/jotai/store";
 import { DevTools } from 'jotai-devtools';
@@ -37,7 +37,7 @@ export default function RootLayout({
           <QueryClientProvider client={queryClient}>
             <RainbowKitProvider>
               <StoreProvider>
-                <Navbar />
+                <NavbarPage />
                 {children}
                 <Footer />
                 <DevTools store={store} />
