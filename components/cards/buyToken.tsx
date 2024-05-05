@@ -67,7 +67,7 @@ export default function BuyTokenCard() {
                 placeholder="0"
                 labelPlacement="outside"
                 endContent={
-                  selected === "Buy" ?
+                  selected === "Sell" ?
                   <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
                   :
                   <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
@@ -79,7 +79,7 @@ export default function BuyTokenCard() {
                 placeholder="0"
                 labelPlacement="outside"
                 endContent={
-                  selected === "Sell" ?
+                  selected === "Buy" ?
                   <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
                   :
                   <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
