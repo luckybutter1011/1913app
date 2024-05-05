@@ -25,7 +25,7 @@ export default function CookieModal() {
   return (
     <>
     { isOpen &&
-      <div className="fixed bottom-0 right-0 mb-4 mr-4 w-[400px]">
+      <div className="fixed bottom-0 right-0 mb-4 mr-4 w-[300px] sm:w-[400px]">
         <div className="bg-white rounded-lg shadow-lg p-4">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center">

@@ -5,7 +5,7 @@ import WalletModal from "@/components/modals/wallet";
 import CookieModal from "@/components/modals/cookie";
 import { tokenBuyAtoms, visibleAtom } from "@/components/jotai/atom";
 import { useAtom } from "jotai";
-
+import ChangeNetWorkComponent from "@/components/UI/ChangeNetwork";
 import { Input, Button, Card, CardHeader, CardBody } from "@nextui-org/react";
 import Image from "next/image";
 import BuyTokenCard from "@/components/cards/buyToken";
@@ -23,8 +23,9 @@ export default function Home() {
   return (
     <main className="w-full flex bg-background justify-center min-h-[800px] bg-bk-img">
       <div className="flex flex-col mx-8 mt-[1rem] lg:mt-[5rem] transition-all delay-500">
-        <div className="w-full flex justify-end py-1">
-          <Button variant="bordered" className="flex sm:hidden border-white bg-black text-white px-6 active:scale-90" onClick={() => setVisible(!visible)} > MoonPay </Button>
+        <div className="w-full justify-center items-center py-1 flex sm:hidden gap-2 mb-1">
+          <ChangeNetWorkComponent />
+          <Button variant="bordered" className="border-white bg-black text-white px-6 active:scale-90 text-[12px] sm:text-[14px]" onClick={() => setVisible(!visible)} > MoonPay </Button>
         </div>
         <div className="flex lg:hidden items-center justify-center">
           <p className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-4 flex items-center flex-col">
