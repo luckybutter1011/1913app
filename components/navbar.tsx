@@ -18,8 +18,8 @@ export default function Navbar() {
           </button>
           <div className="hidden lg:flex items-center justify-center">
             <p className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-4 flex items-center flex-col sm:flex-col">
-              <p className="text-[16px] underline">Supported of 1913$ token Price is</p>
-              <span className="text-[16px] sm:text-[20px] lg:text-[24px] text-black">$31.35</span>
+              <p className="text-[16px] underline">Guaranteed floor price of 1913$ is:</p>
+              <span className="text-[16px] sm:text-[20px] lg:text-[24px] text-black">$31.55</span>
             </p>
           </div>
           <div className="flex flex-row gap-6 items-center lg:w-[300px]">
