@@ -9,7 +9,7 @@ export default function BuyTokenCard() {
   const [selected, setSelected] = useState<any>("Buy");
   return (
     <>
-      <Card className="animate-fade-right animate-once animate-ease-out sm:w-[400px]">
+      <Card className="animate-fade-right animate-once animate-ease-out sm:w-[400px] sm:h-[500px]">
         <CardHeader className="px-4 flex-col items-center bg-white">
           <div className="w-full flex justify-center items-center">
             <Tabs variant="underlined" size="lg" fullWidth selectedKey={selected} onSelectionChange={setSelected}>
@@ -20,11 +20,7 @@ export default function BuyTokenCard() {
           {/* <p className="uppercase font-bold text-[20px] text-gray-700">BUY 1913$ TOKEN</p> */}
         </CardHeader>
         <CardBody className="overflow-visible">
-          {selected === "Buy" ?
-            <p className="text-default-500 text-[16px] px-4">Use 0x-xxxxxxxxxxxxxxxxxxxxxxxxxxxx to add 1913$ to your wallet.</p>
-            :
-            <p className="text-default-500 text-[16px] px-4">Sell the 1913$ to get the cryptocurrency.</p>
-          }
+          <p className="text-default-500 text-[16px] px-4">Use 0x-xxxxxxxxxxxxxxxxxxxxxxxxxxxx to add 1913$ to your wallet.</p>
           <div className="w-full p-4">
             <div className="grid grid-cols-2 gap-6">
               <Button variant="bordered" className={`${token === "ETH" ? "bg-slate-400" : ""} w-full gap-2`} onClick={() => { setToken("ETH"); setImageToken('/icons/ether.png'); }}>
@@ -68,9 +64,9 @@ export default function BuyTokenCard() {
                 labelPlacement="outside"
                 endContent={
                   selected === "Sell" ?
-                  <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
-                  :
-                  <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
+                    <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
+                    :
+                    <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
                 }
               />
               <IoArrowForwardOutline size={40} className="text-black" />
@@ -80,9 +76,9 @@ export default function BuyTokenCard() {
                 labelPlacement="outside"
                 endContent={
                   selected === "Buy" ?
-                  <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
-                  :
-                  <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
+                    <Image className="pointer-events-none flex-shrink-0" alt="" src="/logo.png" width={25} height={25} />
+                    :
+                    <Image className="pointer-events-none flex-shrink-0" alt="" src={img_token} width={25} height={25} />
                 }
               />
             </div>

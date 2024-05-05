@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <main className="w-full flex bg-background justify-center min-h-[800px] bg-bk-img">
-      <div className="flex flex-col mx-8 mt-[1rem] lg:mt-[5rem] transition-all delay-500">
+      <div className="flex flex-col mt-[1rem] lg:mt-[5rem] transition-all delay-500 w-full mx-[3rem] xl:mx-[8rem]">
         <div className="w-full justify-center items-center py-1 flex sm:hidden gap-2 mb-1">
           <ChangeNetWorkComponent />
           <Button variant="bordered" className="border-white bg-black text-white px-6 active:scale-90 text-[12px] sm:text-[14px]" onClick={() => setVisible(!visible)} > MoonPay </Button>
@@ -33,11 +33,11 @@ export default function Home() {
             <span className="text-[16px] sm:text-[20px] lg:text-[24px] text-black">$31.55</span>
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:mt-20 my-6 mx-[20px] gap-6">
-          <div className="lg:w-1/3 gap-8 flex flex-col animate-fade-right animate-once animate-ease-out">
-            <div className="bg-[rgba(255,255,255,0.9)] py-6 lg:py-10 px-8 rounded-xl">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:mt-20 my-6  gap-6 w-full">
+          <div className="gap-8 flex flex-col animate-fade-right animate-once animate-ease-out justify-start items-center sm:w-[400px]">
+            <div className="bg-[rgba(255,255,255,0.9)] py-6 lg:py-10 px-8 rounded-xl sm:h-[500px] flex-col items-center">
               <div className="flex flex-col gap-6 lg:gap-16">
-                <p className="text-gray-800 drop-shadow-lg underline text-[32px] xl:text-[48px] leading-none font-bold">The 1913$ is a new Stable coin</p>
+                <p className="text-gray-800 drop-shadow-lg underline text-[48px] leading-none font-bold">The 1913$ is a new Stable coin</p>
                 <p className="text-gray-600 drop-shadow text-[16px] xl:text-[20px]">The 1913$ is a new Stable coin that is inflation resistant. It goes up in value based on the CPI data for inflation.</p>
               </div>
               <div className="flex flex-col lg:flex-row gap-6 items-center mt-6">
@@ -59,7 +59,6 @@ export default function Home() {
           </div>
           <div className="animate-fade-left animate-ease-in-out">
             <BuyTokenCard />
-            {/* <Image className="" src="/1dollar.png" alt="" width={800} height={800}></Image> */}
           </div>
         </div>
         <MoonPayBuyWidget
