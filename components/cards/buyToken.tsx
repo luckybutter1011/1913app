@@ -4,9 +4,10 @@ import { IoArrowForwardOutline } from "react-icons/io5";
 import { useState } from "react";
 
 export default function BuyTokenCard() {
-  const [token, setToken] = useState("ETH");
-  const [img_token, setImageToken] = useState('/icons/ether.png');
-  const [selected, setSelected] = useState<any>("Buy");
+  const [token, setToken] = useState("ETH"); // Select Tokens
+  const [img_token, setImageToken] = useState('/icons/ether.png'); // Select Tokens
+  const [selected, setSelected] = useState<any>("Buy"); // Sell or Buy option
+
   return (
     <>
       <Card className="animate-fade-right animate-once animate-ease-out sm:w-[400px] sm:h-[500px]">
@@ -84,7 +85,7 @@ export default function BuyTokenCard() {
           </div>
           <div className="flex w-full flex-col items-center gap-4 py-4">
             <a href="#" className="uppercase text-gray-700 underline text-[12px]">WANT TO CLAIM YOUR 1913$? CLICK HERE</a>
-            <p className="text-gray-600 text-[12px]">Powered by <strong>1913$.com</strong></p>
+            <p className="text-gray-600 text-[12px]">Powered by <strong>Realassetdao.com</strong></p>
           </div>
         </CardBody>
       </Card>

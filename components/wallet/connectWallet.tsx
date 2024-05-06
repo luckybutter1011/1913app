@@ -1,3 +1,4 @@
+// Custom connect Wallet Button
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export const ConnectWallet = () => {
@@ -34,7 +35,7 @@ export const ConnectWallet = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <button onClick={openConnectModal} type="button" className='border-2 rounded-xl border-white p-2 text-white hover:bg-gray-400 text-[12px] sm:text-[14px]'>
+                  <button onClick={openConnectModal} type="button" className='border-2 rounded-xl border-white px-2 py-1 text-white hover:bg-gray-400 text-[14px] lg:text-[16px] xl:text-[20px]'>
                     Connect Wallet
                   </button>
                 );

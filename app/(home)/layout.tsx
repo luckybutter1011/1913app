@@ -10,6 +10,7 @@ import { mainnet, polygon, optimism, arbitrum, base } from 'wagmi/chains';
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import dynamic from 'next/dynamic';
 
+// MoonpayProvider is a dynamic import, so it won't be bundled in the SSR
 const MoonPayProvider = dynamic(
   () => import('@moonpay/moonpay-react').then((mod) => mod.MoonPayProvider),
   { ssr: false },
@@ -21,7 +22,7 @@ const config = getDefaultConfig({
   appName: '$1913 project',
   projectId: projectId,
   chains: [mainnet, polygon, optimism, arbitrum, base],
-  ssr: true, // If your dApp uses server side rendering (SSR)
+  ssr: true,
 });
 
 export default function RootLayout({

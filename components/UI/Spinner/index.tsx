@@ -1,3 +1,4 @@
+// Page loading spinner
 export default function Spinner() {
   return (
     <>

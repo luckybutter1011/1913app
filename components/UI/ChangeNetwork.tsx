@@ -10,11 +10,14 @@ const Chains = [
 ]
 
 export default function ChangeNetWorkComponent() {
-  const [chain, setChain] = useState<any>({ chainName: 'Polygon', ImageUrl: '/icons/polygon.svg' });
+  const [chain, setChain] = useState<any>({ chainName: 'Polygon', ImageUrl: '/icons/polygon.svg' }); // Select Network
+
+  // Get the network from local storage
   useEffect(()=>{
     localStorage.getItem('chain') && setChain(Chains.find((chain) => chain?.chainName === localStorage.getItem('chain')));
   },[])
 
+  // Save the network to local storage
   const handleSetChain = (key: any) => {
     localStorage.setItem('chain', key);
     setChain(Chains.find((chain) => chain?.chainName === key))
@@ -26,7 +29,7 @@ export default function ChangeNetWorkComponent() {
         <DropdownTrigger>
           <Button
             variant="bordered"
-            className="text-white px-2 active:scale-90 border-white bg-black text-[12px] sm:text-[14px] hover:bg-gray-400"
+            className="text-white px-2 active:scale-90 border-white bg-black text-[14px] lg:text-[16px] xl:text-[20px] hover:bg-gray-400"
           >
             <HeaderNetWorkComponent key={chain?.chainName} chain={chain} />
           </Button>

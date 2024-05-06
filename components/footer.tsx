@@ -1,3 +1,4 @@
+// Footer.tsx
 import { FaGithub, FaTwitter, FaTelegramPlane, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
@@ -32,7 +33,7 @@ export default function Footer() {
                             <span className="sr-only">Telegram</span>
                             <FaTelegramPlane />
                         </a>
-                        <a href="#" className="text-gray-400 hover:text-gray-500">
+                        <a href="https://twitter.com/RealAssetDAO" className="text-gray-400 hover:text-gray-500">
                             <span className="sr-only">Instagram</span>
                             <FaTwitter />
                         </a>

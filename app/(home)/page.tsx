@@ -1,3 +1,4 @@
+// Home.tsx
 'use client'
 import React from "react";
 import CookieModal from "@/components/modals/cookie";
@@ -14,6 +15,7 @@ const MoonPayBuyWidget = dynamic(
 );
 
 export default function Home() {
+  // For MoonPay
   const [visible, setVisible] = useAtom(visibleAtom);
 
   return (
@@ -33,7 +35,7 @@ export default function Home() {
           <div className="gap-8 flex flex-col animate-fade-right animate-once animate-ease-out justify-start items-center sm:w-[400px]">
             <div className="bg-[rgba(255,255,255,0.9)] py-6 lg:py-10 px-8 rounded-xl sm:h-[500px] flex-col items-center">
               <div className="flex flex-col gap-6 lg:gap-16">
-                <p className="text-gray-800 drop-shadow-lg underline text-[48px] leading-none font-bold">The 1913$ is a new Stable coin</p>
+                <p className="text-gray-800 drop-shadow-lg underline text-[28px] sm:text-[48px] leading-none font-bold">The 1913$ is a new Stable coin</p>
                 <p className="text-gray-600 drop-shadow text-[16px] xl:text-[20px]">The 1913$ is a new Stable coin that is inflation resistant. It goes up in value based on the CPI data for inflation.</p>
               </div>
               <div className="flex flex-col lg:flex-row gap-6 items-center mt-6">
@@ -45,7 +47,7 @@ export default function Home() {
                 <div className="flex flex-col">
                   <p className="text-gray-700 drop-shadow-lg font-bold"> 3k+</p>
                   <p className="text-gray-700 drop-shadow-lg font-bold text-[14px] xl:text-[16px]">
-                    <a href="https://twitter.com/1913$" target="_blank" rel="noreferrer" className="underline hover:text-blue-600">
+                    <a href="https://twitter.com/RealAssetDAO" target="_blank" rel="noreferrer" className="underline hover:text-blue-600">
                       Community members
                     </a>
                   </p>
