@@ -15,7 +15,6 @@ interface DataContextType {
 export const ToastContext = createContext<DataContextType | null>(null);
 
 const ToastProvider: React.FC<DataProviderProps> = ({ children }) => {
-  const [isLogin, SetLogin] = useState<boolean>(false);
   const [isLoading, SetLoading] = useState<any>(false);
   useEffect(()=>{
     setTimeout(() => {SetLoading(true)}, 500)

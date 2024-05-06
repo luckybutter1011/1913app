@@ -17,7 +17,6 @@ export default function BuyTokenCard() {
               <Tab key="Sell" title="Sell" className="text-[24px]" />
             </Tabs>
           </div>
-          {/* <p className="uppercase font-bold text-[20px] text-gray-700">BUY 1913$ TOKEN</p> */}
         </CardHeader>
         <CardBody className="overflow-visible">
           <p className="text-default-500 text-[16px] px-4">Use 0x-xxxxxxxxxxxxxxxxxxxxxxxxxxxx to add 1913$ to your wallet.</p>

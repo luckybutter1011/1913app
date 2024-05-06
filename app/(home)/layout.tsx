@@ -14,10 +14,12 @@ const MoonPayProvider = dynamic(
   () => import('@moonpay/moonpay-react').then((mod) => mod.MoonPayProvider),
   { ssr: false },
 );
+
+const projectId:any = process.env.NEXT_PUBLIC_PROJECT_ID;
 const queryClient = new QueryClient();
 const config = getDefaultConfig({
   appName: '$1913 project',
-  projectId: '495145f374ec1d97a3af135251c7eaf6',
+  projectId: projectId,
   chains: [mainnet, polygon, optimism, arbitrum, base],
   ssr: true, // If your dApp uses server side rendering (SSR)
 });

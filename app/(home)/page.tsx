@@ -1,16 +1,12 @@
 'use client'
-import { GoArrowUpRight } from "react-icons/go";
-import React, { useState } from "react";
-import WalletModal from "@/components/modals/wallet";
+import React from "react";
 import CookieModal from "@/components/modals/cookie";
-import { tokenBuyAtoms, visibleAtom } from "@/components/jotai/atom";
+import { visibleAtom } from "@/components/jotai/atom";
 import { useAtom } from "jotai";
 import ChangeNetWorkComponent from "@/components/UI/ChangeNetwork";
-import { Input, Button, Card, CardHeader, CardBody } from "@nextui-org/react";
-import Image from "next/image";
+import { Button } from "@nextui-org/react";
 import BuyTokenCard from "@/components/cards/buyToken";
 import dynamic from 'next/dynamic';
-
 
 const MoonPayBuyWidget = dynamic(
   () => import('@moonpay/moonpay-react').then((mod) => mod.MoonPayBuyWidget),
@@ -28,10 +24,10 @@ export default function Home() {
           <Button variant="bordered" className="border-white bg-black text-white px-6 active:scale-90 text-[12px] sm:text-[14px]" onClick={() => setVisible(!visible)} > MoonPay </Button>
         </div>
         <div className="flex lg:hidden items-center justify-center">
-          <p className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-4 flex items-center flex-col">
+          <div className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-4 flex items-center flex-col">
             <p className="text-[16px] underline">Guaranteed floor price of 1913$ is:</p>
             <span className="text-[16px] sm:text-[20px] lg:text-[24px] text-black">$31.55</span>
-          </p>
+          </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between items-center lg:mt-20 my-6  gap-6 w-full">
           <div className="gap-8 flex flex-col animate-fade-right animate-once animate-ease-out justify-start items-center sm:w-[400px]">

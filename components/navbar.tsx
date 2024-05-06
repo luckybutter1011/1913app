@@ -3,7 +3,6 @@ import Image from "next/image"
 import { useAtom } from "jotai"
 import { visibleAtom } from "./jotai/atom"
 import { ConnectWallet } from "./wallet/connectWallet"
-import { useState } from "react"
 import ChangeNetWorkComponent from "./UI/ChangeNetwork"
 import { Button } from "@nextui-org/react"
 
@@ -19,10 +18,10 @@ export default function Navbar() {
             <span className="lg:text-[36px] text-[20px]">1913$</span>
           </a>
           <div className="hidden lg:flex items-center justify-center">
-            <p className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-2 flex items-center flex-col sm:flex-col">
+            <div className="text-black text-[16px] sm:text-[20px] lg:text-[24px] bg-[rgba(255,255,255,0.9)] rounded-lg px-2 flex items-center flex-col sm:flex-col">
               <p className="text-[14px] underline">Guaranteed floor price of 1913$ is:</p>
               <span className="text-[16px] sm:text-[20px] lg:text-[24px] text-black">$31.55</span>
-            </p>
+            </div>
           </div>
           <div className="flex flex-row justify-end gap-2 items-center w-[400px]">
             <div className="hidden sm:flex">

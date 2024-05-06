@@ -34,7 +34,7 @@ export default function CookieModal() {
             </div>
             <button className="text-gray-500 hover:text-gray-700 focus:outline-none" onClick={()=>{setOpen(false)}}>
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12">
                 </path>
               </svg>
             </button>
